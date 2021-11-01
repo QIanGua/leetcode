@@ -1,1 +1,9 @@
-*  Leetcode Solution
+*  Leetcode CMake
+** Requirements
+- CMake
+- GTest
+- GCC/Clang
+** Usage
+- create cpp files in src/ (or py file in src/Python temporally)
+- chmod +x run.sh (in zsh)
+- run *./run.sh 0001* in parent directory (0001 is the number of problem)
