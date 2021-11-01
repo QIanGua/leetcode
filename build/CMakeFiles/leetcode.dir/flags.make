@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/wangqianlong/Code/CXX/leetcode/src/include
+CXX_INCLUDES = -I/Users/wangqianlong/Code/CXX/leetcode/src/gtest -isystem /Users/wangqianlong/Code/CXX/leetcode/src/gtest/googletest/include -isystem /Users/wangqianlong/Code/CXX/leetcode/src/gtest/googletest
 
 CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -std=gnu++11
 

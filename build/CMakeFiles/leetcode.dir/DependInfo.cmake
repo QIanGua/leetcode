@@ -8,11 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/wangqianlong/Code/CXX/leetcode/src/01-twoSums.cpp" "CMakeFiles/leetcode.dir/01-twoSums.cpp.o" "gcc" "CMakeFiles/leetcode.dir/01-twoSums.cpp.o.d"
+  "/Users/wangqianlong/Code/CXX/leetcode/src/0002-two-sums.cpp" "CMakeFiles/leetcode.dir/0002-two-sums.cpp.o" "gcc" "CMakeFiles/leetcode.dir/0002-two-sums.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/Users/wangqianlong/Code/CXX/leetcode/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/Users/wangqianlong/Code/CXX/leetcode/build/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
