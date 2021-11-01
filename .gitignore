@@ -1,5 +1,7 @@
 # CMake
 build/
+build/*
+build/CMakeFiles/*
 
 .DS_Store
 

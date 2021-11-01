@@ -28,4 +28,8 @@ if (${PROBLEM_NUMBER})
   add_executable(leetcode ${SOURCE_FILES})
   # Link with gtest
   target_link_libraries(leetcode gtest gtest_main)
+
+  add_custom_target(run
+    COMMAND ./leetcode
+    )
 endif()
