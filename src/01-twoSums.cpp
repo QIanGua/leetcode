@@ -32,25 +32,43 @@ public:
 };
 
 
+
+TEST(testCase,test0){
+    vector<int> nums;
+    nums.push_back(2);
+    nums.push_back(7);
+    nums.push_back(11);
+    nums.push_back(15);
+
+    vector<int> result;
+    result.push_back(0);
+    result.push_back(1);
+
+    int target = 9;
+    Solution1 test1;
+
+    EXPECT_EQ(result, test1.twoSums(nums, target));
+}
+
 int main(int argc, char *argv[])
 {
-    vector<int> nums = {7,11,2,15};
-    vector<int> a1,a2;
-    // int i, target = 9;
-    int i, target = 26;
-    Solution1 test1;
-    Solution2 test2;
+    // vector<int> nums = {2,7,11,15};
+    // vector<int> a1,a2;
+    // // int i, target = 9;
+    // int i, target = 26;
+    // Solution1 test1;
+    // Solution2 test2;
 
-    a1 = test1.twoSums(nums,target);
-    a2 = test2.twoSums(nums,target);
+    // a1 = test1.twoSums(nums,target);
+    // a2 = test2.twoSums(nums,target);
     
-    for (i = 0; i < a1.size(); ++i) {
-        cout << a1[i] << endl;
-    }
+    // for (i = 0; i < a1.size(); ++i) {
+    //     cout << a1[i] << endl;
+    // }
 
-    for (i = 0; i < a2.size(); ++i) {
-        cout << a2[i] << endl;
-    }
-
-    return 0;
+    // for (i = 0; i < a2.size(); ++i) {
+    //     cout << a2[i] << endl;
+    // }
+    testing::InitGoogleTest(&argc,argv);
+    return RUN_ALL_TESTS();
 }

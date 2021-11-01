@@ -12,7 +12,7 @@ project (leetcode)
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
+
 # Add an executable
 file(GLOB SOURCE_FILES "*.cpp")
 add_executable(leetcode ${SOURCE_FILES})
-

@@ -30,8 +30,8 @@
 /* #include <cstring> */
 
 // gtest
-/* #include <gtest/gtest.h> */
-
+#include <gtest/gtest.h>
+// #include "gtest/gtest.h"
 // listnode
 /* #include "listnode.h" */
 /* #include "btree.h" */
