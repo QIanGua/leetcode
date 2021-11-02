@@ -23,12 +23,15 @@ public:
             if (hashtable.find(num) != hashtable.end()) {
                 return {hashtable[num],i};
             }
-            hashtable[nums[i]] = i;
+            else {
+                hashtable[nums[i]] = i;
+            }
         }
         return {};
     };
 
 };
+
 
 TEST(Case0001,solution){
     vector<int> nums = {2,7,11,15};
