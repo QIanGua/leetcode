@@ -1,9 +1,17 @@
 #!/usr/local/bin/zsh
 
-cd ./build/
+## define path variables
+src="$(git root)/src"
+build="$(git root)/build"
+# echo "${build}"
 
-cmake ../src -D PROBLEM_NUMBER=$1
+## if $(build) doesn't exist, generate it.
+if [ ! -d "${build}" ]; then
+    echo "${build}doesn't exist, generate it"
+    mkdir -p ${build}
+fi
 
+cd ${build}
+cmake ${src} -D PROBLEM_NUMBER=$1
 make
-
 ./leetcode
