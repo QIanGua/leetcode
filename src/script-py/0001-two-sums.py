@@ -1,3 +1,9 @@
+# File Name: 0001-TWO-SUMS.PY
+# Author: Qiangua
+# Email: caicailiushui@protonmail.com
+# Copyright © 2021, Qiangua, all rights reserved. 
+# Created:  2 November 2021 
+
 from typing import List
 class Solution:
     def twoSums(self, nums: List[int], target: int) -> List[int]:

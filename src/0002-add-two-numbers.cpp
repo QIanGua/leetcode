@@ -7,25 +7,6 @@
 #include "headers.h"
 #include <gtest/gtest.h>
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-
-struct ListNode {
-        int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -55,8 +36,7 @@ struct ListBuilder {
     }
 };
 
-TEST(TTT, TTT1)
-{
+TEST(TTT, TTT1) {
     ListNode* l1 = ListBuilder {2, {4, {3}}};
     ListNode* l2 = ListBuilder {5, {6, {4}}};
     Solution s;
@@ -72,8 +52,7 @@ TEST(TTT, TTT1)
 
 
 
-TEST(TTT, TTT2)
-{
+TEST(TTT, TTT2) {
     ListNode* l1 = ListBuilder {0};
     ListNode* l2 = ListBuilder {0};
     Solution s;
@@ -87,8 +66,7 @@ TEST(TTT, TTT2)
     }
 }
 
-TEST(TTT, TTT3)
-{
+TEST(TTT, TTT3) {
     ListNode* l1 = ListBuilder {9,{9,{9,{9,{9,{9,{9}}}}}}};
     ListNode* l2 = ListBuilder {9,{9,{9,{9}}}};
     Solution s;
@@ -102,8 +80,7 @@ TEST(TTT, TTT3)
     }
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv){
     cout << "Problem: 0002-ADD-TWO-NUMBERS.CPP" << endl;
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
