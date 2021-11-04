@@ -1,4 +1,4 @@
 # CMake
 build/
 .DS_Store
-
+src/script-py/__pycache__/*
