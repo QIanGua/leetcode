@@ -33,7 +33,7 @@ public:
 //     return 0;
 // }
 
-TEST(TTT, TTT) {
+TEST(TTT, TTT1) {
     Solution s;
     string s1 = "abcdeeff";
     int expect = 6;
@@ -41,7 +41,21 @@ TEST(TTT, TTT) {
     EXPECT_EQ(expect,test);
 };
 
+TEST(TTT, TTT2) {
+    Solution s;
+    string s1 = "abcd";
+    int expect = 4;
+    int test = s.lengthOfLongestSubstring(s1);
+    EXPECT_EQ(expect,test);
+};
 
+TEST(TTT, TTT3) {
+    Solution s;
+    string s1 = "d-x";
+    int expect = 3;
+    int test = s.lengthOfLongestSubstring(s1);
+    EXPECT_EQ(expect,test);
+};
 int main(int argc, char **argv) {
     cout << "Problem: 0003-LONGEST-SUBSTRING-WITHOUT-REPEATED-CHARACTERS.CPP" << endl;
     ::testing::InitGoogleTest(&argc, argv);
