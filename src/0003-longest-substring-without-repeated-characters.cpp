@@ -9,42 +9,33 @@
 class Solution{
 public:
     int lengthOfLongestSubstring(string s) {
-        unordered_map<int,int> subset;
-        int i;
+        unordered_map<int,int> last_idx;
+        int i, start_idx = 0, max_len = 0;
         for (i = 0; i < s.size(); ++i) {
-            if(subset.find(s[i]) == subset.end()){
-                subset[s[i]] = i;
+            if(last_idx.find(s[i]) != last_idx.end()){
+                start_idx = max(start_idx,last_idx[s[i]] + 1);
             }
+            max_len = max(max_len, i - start_idx + 1);
+            last_idx[s[i]] = i;
         }
-        return subset.size();
+        return max_len;
     };
 };
 
-// int main(int argc, char *argv[])
-// {
-//     // unordered_map<int,int> map;
-//     // map.insert(make_pair(1,2));
-//     // map.insert(make_pair(2,4));
-//     // cout << map[1] << endl;
-//     // cout << map.size() << endl;
-//     Solution s;
-//     string s1 = "abcddee";
-//     cout << s.lengthOfLongestSubstring(s1) << endl;
-//     return 0;
-// }
 
 TEST(TTT, TTT1) {
     Solution s;
-    string s1 = "abcdeeff";
-    int expect = 6;
+    // string s1 = "abba";
+    string s1 = " ";
+    int expect = 1;
     int test = s.lengthOfLongestSubstring(s1);
     EXPECT_EQ(expect,test);
 };
 
 TEST(TTT, TTT2) {
     Solution s;
-    string s1 = "abcd";
-    int expect = 4;
+    string s1 = "";
+    int expect = 0;
     int test = s.lengthOfLongestSubstring(s1);
     EXPECT_EQ(expect,test);
 };
@@ -56,6 +47,7 @@ TEST(TTT, TTT3) {
     int test = s.lengthOfLongestSubstring(s1);
     EXPECT_EQ(expect,test);
 };
+
 int main(int argc, char **argv) {
     cout << "Problem: 0003-LONGEST-SUBSTRING-WITHOUT-REPEATED-CHARACTERS.CPP" << endl;
     ::testing::InitGoogleTest(&argc, argv);
