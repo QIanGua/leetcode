@@ -7,4 +7,3 @@
 - =chmod +x run.sh= (in zsh) (=build= will created automatically and =cmake= will run in =/build/=)
 - [[run.sh]]: run =./run.sh problem-number= or =sh run.sh problem-number= in parent directory (e.g., =./run.sh 0001= , 0001 is the number of problem)
 - python script can be tested in the command line, i.e., =python src/script-py/0001-two-sums.py=
-
