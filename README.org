@@ -12,5 +12,5 @@
 - create *.py* files in =src/script-py=, e.g., =0001-two-sums.py= 
 - *python* script can be tested in the command line, i.e., =python src/script-py/0001-two-sums.py=
 *** Julia
-- create *.jl* files in =src/script-jl=, e.g., =0001-two-sums.cpp= 
-- *julia* script can be tested in the command line, i.e., =julia src/srcript-jl/0006-zigzag-conversion.jl=
+- create *.jl* files in =src/script-jl=, e.g., =0001-two-sums.jl= 
+- *julia* script can be tested in the command line, i.e., =julia src/srcript-jl/0001-two-sums.jl=
