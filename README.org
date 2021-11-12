@@ -1,10 +1,16 @@
-*  Leetcode CMake
+*  Leetcode in CXX/Python/Julia
 ** Requirements
-- CMake (gtest is included in =src=)
-- GCC/Clang
+- CMake (gtest is included in =src=), GCC/Clang
+- Python 3.8.11
+- Julia 
 ** Usage
-- create cpp files in src/, e.g., =0001-two-sums.cpp= (or *py* file in =src/script-py=)
-- =chmod +x run.sh= (in zsh) (=build= will created automatically and =cmake= will run in =/build/=)
+*** C++11
+- create *.cpp* files in =src/=, e.g., =0001-two-sums.cpp= 
+- =chmod +x run.sh= (in terminal) (=build= will created automatically and =cmake= will run in =/build/=)
 - [[run.sh]]: run =./run.sh problem-number= or =sh run.sh problem-number= in parent directory (e.g., =./run.sh 0001= , 0001 is the number of problem)
+*** Python
+- create *.py* files in =src/script-py=, e.g., =0001-two-sums.py= 
 - *python* script can be tested in the command line, i.e., =python src/script-py/0001-two-sums.py=
+*** Julia
+- create *.jl* files in =src/script-jl=, e.g., =0001-two-sums.cpp= 
 - *julia* script can be tested in the command line, i.e., =julia src/srcript-jl/0006-zigzag-conversion.jl=
