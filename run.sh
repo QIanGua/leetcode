@@ -14,4 +14,5 @@ fi
 cd ${build}
 cmake ${src} -D PROBLEM_NUMBER=$1
 make
-./leetcode
+make run
+# ./leetcode
