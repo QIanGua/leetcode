@@ -1,11 +1,11 @@
 *  Leetcode in CXX/Python/Julia
 ** Requirements
-- CMake (gtest is included in =src=), GCC/Clang
-- Python 3.8.11
+- CMake (gtest is included in =src/script-cxx=), GCC/Clang
+- Python3
 - Julia 
 ** Usage
 *** C++11
-- create *.cpp* files in =src/=, e.g., =0001-two-sums.cpp= 
+- create *.cpp* files in =src/script-cxx=, e.g., =0001-two-sums.cpp= 
 - =chmod +x run.sh= (in terminal) (=build= will created automatically and =cmake= will run in =/build/=)
 - [[run.sh]]: run =./run.sh problem-number= or =sh run.sh problem-number= in parent directory (e.g., =./run.sh 0001= , 0001 is the number of problem)
 *** Python
