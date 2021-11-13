@@ -1,7 +1,7 @@
 #!/usr/local/bin/zsh
 
 ## define path variables
-src="$(git root)/src"
+src="$(git root)/src/script-cxx"
 build="$(git root)/build"
 # echo "${build}"
 

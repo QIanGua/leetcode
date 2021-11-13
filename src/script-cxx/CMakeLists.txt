@@ -6,13 +6,14 @@ cmake_minimum_required(VERSION 3.5)
 # Use C++11
 set (CMAKE_CXX_STANDARD 11)
 
-if( PROBLEM_NUMBER ) 
+if( PROBLEM_NUMBER )
   message("PROBLEM_NUMBER=${PROBLEM_NUMBER}")
 endif()
 
 # Set the project name
 project (leetcode)
 
+message("projsrc=${PROJECT_SOURCE_DIR}")
 
 include_directories("${PROJECT_SOURCE_DIR}/gtest")
 add_subdirectory("${PROJECT_SOURCE_DIR}/gtest")
