@@ -1,7 +1,8 @@
 #include "headers.h"
 #include <gtest/gtest.h>
 
-class Solution {
+class Solution
+{
 public:
     vector<int>  twoSums1(vector<int> nums, int target){
         int i,j;

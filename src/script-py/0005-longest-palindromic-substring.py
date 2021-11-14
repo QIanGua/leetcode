@@ -21,7 +21,7 @@ class Solution:
                 right += 1
 
             if right - left > pr - pl:
-                pl,pr = left,right
+               pl,pr = left,right
 
             left = int( (left + right)/2 + 1 )
             right = left
