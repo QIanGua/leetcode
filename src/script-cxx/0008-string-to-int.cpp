@@ -70,7 +70,7 @@ public:
                 }
 
                 if ( table.find(sn) == table.end() || sn == "-" || sn == "+"){
-                    cout << "case3" << endl;
+                    // cout << "case3" << endl;
                     return pre;
                 }
             }
@@ -78,13 +78,71 @@ public:
         }
         return pre;
     }
+
+    int myAtoi2(string s) {
+        int i=0,sign=1,pre=0;
+
+        //trim leading whitespace
+        s.erase(0,s.find_first_not_of(" "));
+        //check s
+        // cout << s << endl;
+
+        // void
+        if (s.size() == 0) {
+            return 0;
+        }
+
+        if (s.size() == 1 && isdigit(s[0])) {
+            return s[0] - '0';
+        }
+
+        if ( s[0] != '-' && s[0] != '+' && !isdigit(s[0])) {
+            return 0;
+        }
+        else if ( s[0] == '-' ) {
+            sign = -1;
+            pre = 0;
+        }
+        else if ( s[0] == '+' ) {
+            sign = 1;
+            pre = 0;
+        }
+        else {
+            pre = s[0] - '0';
+        }
+
+        // second char
+		if ( isdigit(s[0]) && !isdigit(s[1])){
+			cout << "c1" << endl;
+			return pre;
+		}
+		else if ( !isdigit(s[0]) &&  !isdigit(s[1])) {
+			cout << "c2" << endl;
+			return 0;
+		}
+        while ( isdigit(s[i+1]) && i < s.size() - 1 ) {
+            // cutoff if pre exceed Int32
+            if ((pre > INT_MAX/10 && isdigit(s[i+1])) || (pre == INT_MAX/10 && (s[i+1]-'0') > 7)) {
+                return INT_MAX;
+            }
+            else if ( (pre < INT_MIN/10 && isdigit(s[i+1])) || (pre == INT_MIN/10 && (s[i+1]-'0') > 8)) {
+                return INT_MIN;
+            }
+            else {
+                pre = pre*10 + sign*(s[i+1]-'0');
+                i++;
+            }
+        }
+        return pre;
+    }
+
 };
 
 TEST(TTT, TTT) {
     Solution s;
-    string s1 =" -1010023630o4" ;
+    string s1 = " -1010023630o4" ;
     int expect = -1010023630,actual;
-    actual = s.myAtoi(s1);
+    actual = s.myAtoi2(s1);
     EXPECT_EQ(actual,expect);
 }
 
