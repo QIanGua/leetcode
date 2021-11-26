@@ -19,8 +19,8 @@
 /* #include <map> */
 /* #include <set> */
 /* #include <unordered_set> */
-/* #include <stack> */
-/* #include <queue> */
+#include <stack>
+#include <queue>
 /* #include <numeric> */
 
 // c libraries
