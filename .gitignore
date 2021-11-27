@@ -2,3 +2,4 @@
 build/
 .DS_Store
 src/script-py/__pycache__/*
+test.cpp
